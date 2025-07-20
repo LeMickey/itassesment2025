@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-seriff;
+}
+body{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url("../Images/studio.jpg");
+    background-position: center;
+    background-size:cover;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    z-index: 100;
+}
+.flex{
+    display: flex;
+    align-items: center;
+
+}
+.container{
+    max-width: 1200px;
+    width:100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.navbar{
+    gap: 10px;
+    justify-content: space-between;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideInDown 0.8s ease-in-out;
+}
+.navbar a{
+    padding: 20px 15px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+.nav-links{
+    gap: 20px;
+    list-style: none;
+    font-size: 20px;
+}
+.navbar a:hover{
+    color:plum;
+}
+.navbar, .nav-links {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav-links li {
+    margin: 10px;
+}
+
+section{
+    padding-top: 80px;
+}
+.section-title{
+    text-align: center;
+
+}
+section h2{
+    font-size: 2rem;
+}
+  
+section .cards{
+    margin-top: 60px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+section .card img{
+    height: 200px;
+    width: 250px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+
+}
+section .card {
+    width: calc(100% / 3 - 30px);
+    text-align: center;
+    list-style: none;
+    background-color:black;
+
+}
+.contact .row{
+    margin: 60px 0 90px;
+    justify-content: space-evenly;
+    word-spacing: 2px;
+}
+.contact .row .col{
+    padding: 0 10px;
+}
+.h2{
+    text-align: center;
+}
+.contact .row .col p{
+    color:black;
+    margin-bottom: 15px;
+}
+.contact .row .col p i {
+    margin-right: 10px;
+
+}
+.contact form input{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    border: 1px solid black;
+}
+.contact form textarea{
+    padding:15px;
+    width:100%;
+    height:150px;
+    outline: none;
+    inline-size: none;
+    border:3px solid gray;
+
+}
+.contact form button{
+    padding:10px 20px;
+    border-radius:6px;
+    font-size:17px;
+    color: black;
+    background: white;
+    margin-top:10px;
+    border:none;
+    cursor: pointer;
+    transition:0.2s;
+}
+.contact form button:hover{
+    color: #fff;
+    background: plum;
+}
+footer {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color:#fff;
+}
+
+
+.contact {
+  padding: 60px 20px;
+  background-color: #111;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-out;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.information {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-details p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.contact-details i {
+  margin-right: 10px;
+}
+
+.form {
+  flex: 1;
+  min-width: 280px;
+}
+
+form {
+  background: #222;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #000;
+  animation: fadeInUp 1s ease forwards;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  background: #333;
+  color: #fff;
+  font-size: 16px;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button {
+  width: 100%;
+  background: #f0f0f0;
+  color: #000;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #ddd;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: white;
+  font-size: 14px;
+}
+
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}

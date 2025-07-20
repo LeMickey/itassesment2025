@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-seriff;
+}
+body{
+    background: black;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+
+}
+.container{
+    max-width: 1200px;
+    width:100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.navbar{
+    gap: 10px;
+    justify-content: space-between;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideInDown 0.8s ease-in-out;
+}
+.navbar a{
+    padding: 20px 15px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+.nav-links{
+    gap: 20px;
+    list-style: none;
+    font-size: 20px;
+}
+.navbar a:hover{
+    color:plum;
+}
+.navbar, .nav-links {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav-links li {
+    margin: 10px;
+}
+.about-hero {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: wheat;
+  background-image: url("../Images/cole.jpg");
+}
+.about-content h1 {
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #000;
+}
+.about-content p {
+  font-size: 22px;
+  margin-top: 15px;
+  font-style: italic;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.about-text {
+  padding: 80px 60px;
+  background-color: #111;
+  text-align: center;
+
+}
+.about-text h2 {
+  font-size: 32px;
+  margin: 40px 0 20px;
+  color: #f0f0f0;
+}
+.about-text p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.team {
+  background-color: #1a1a1a;
+  padding: 60px;
+  text-align: center;
+}
+.team h2 {
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.member {
+  background-color: #222;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 0 10px #000;
+}
+.member img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.member h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.member p {
+  color: white;
+}
+
+.testimonials {
+  background-color: #111;
+  padding: 60px;
+  text-align: center;
+}
+.testimonials h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+.testimonial-box {
+  background-color: #222;
+  border-left: 5px solid #555;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  font-style: italic;
+  box-shadow: 0 0 10px #000;
+}
+.testimonial-box span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+
+footer {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: wheat;
+}
+
+
+footer {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color:white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.about-content {
+  animation: fadeInUp 1s ease-out both;
+}
+
+.about-text h2,
+.team h2,
+.testimonials h2 {
+  animation: slideInBottom 1s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.about-text p,
+.team-members,
+.testimonial-box {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+.team-members .member {
+  animation: zoomIn 0.8s ease forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.testimonial-box:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.testimonial-box:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.about-text,
+.team,
+.testimonials {
+  opacity: 1;
+}
+
+
+.navbar a:hover {
+  color: plum;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .about-content h1 {
+    font-size: 40px;
+  }
+
+  .about-content p {
+    font-size: 18px;
+  }
+
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member {
+    width: 90%;
+  }
+
+  .testimonial-box {
+    width: 90%;
+  }
+}
